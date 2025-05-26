@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vedant's Stopwatch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>⏱ Vedant's Stopwatch</h1>
+
+    <div class="mode-toggle">
+      <label>
+        <input type="checkbox" id="modeToggle" />
+        Countdown Mode
+      </label>
+    </div>
+
+    <div class="input-countdown" id="countdownInputContainer" style="display:none;">
+      <input type="number" id="countdownMinutes" min="0" max="999" placeholder="Minutes" />
+      <input type="number" id="countdownSeconds" min="0" max="59" placeholder="Seconds" />
+      <button id="setCountdownBtn">Set Countdown</button>
+    </div>
+
+    <div id="display">00:00:00.000</div>
+
+    <div class="controls">
+      <button id="startBtn">Start</button>
+      <button id="lapBtn" disabled>Lap</button>
+      <button id="resetBtn">Reset</button>
+      <button id="exportBtn" disabled>Export Laps CSV</button>
+      <button id="copyBtn" disabled>Copy Laps</button>
+    </div>
+
+    <div class="settings">
+      <label>
+        <input type="checkbox" id="showMillis" />
+        Show Milliseconds
+      </label>
+      <label>
+        <input type="checkbox" id="themeToggle" />
+        Dark Mode
+      </label>
+    </div>
+
+    <ul id="laps"></ul>
+  </div>
+
+  <audio id="lapSound" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
